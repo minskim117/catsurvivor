@@ -1,0 +1,976 @@
+{
+  "_설명": "스프라이트 생성 설정. prompt는 자유롭게 고쳐도 된다. refs는 참고 폴더(art/reference/<이름>)이고, 고양이는 cats 폴더에 고양이 이름으로 된 파일(stray.png, cheese_1.png 등)이 있으면 그 그림을 맨 앞에 둔다.",
+  "style": "Match the art style of the reference images exactly: cute chibi kawaii 2D game sprite, thick dark brown outline, soft flat pastel colors with simple cel shading and small white highlights, rounded friendly shapes. Draw exactly ONE subject, centered, fully inside the frame with a small margin. No text, no letters, no numbers, no watermark, no frame, no ground shadow, no background scenery: transparent background.",
+  "group_rules": {
+    "char": "Game character sprite, readable at small size.",
+    "cat": "Game enemy sprite: one cat only, full body, side view facing LEFT, walking pose, readable at small size. Do not copy any single cat from the reference exactly; follow its drawing style.",
+    "pick": "Small collectible pickup item for a game, readable at very small size, chunky shapes.",
+    "icon": "Square inventory icon, bold silhouette, readable at 30 pixels, no border or badge background.",
+    "proj": "Small game projectile or weapon effect, simple bold shape, readable at small size.",
+    "fx": "Game visual effect, made to be scaled up and laid over the ground, soft and translucent.",
+    "walk": "Second frame of a two-frame walking animation. The FIRST reference image is frame 1 of this exact sprite. Redraw the SAME character with an identical design, colors, outline thickness, proportions, size, framing and facing direction (exactly as in frame 1); keep the head and body in the same place. Change ONLY the legs (and the tail, if any) to the opposite step of the walk cycle: legs that were forward in frame 1 are now back.",
+    "part": "Tiny particle sprite for a game effect: exactly one small object, simple bold shape with the same thick dark brown outline, readable at 12 pixels, centered, nothing else."
+  },
+  "items": [
+    {
+      "key": "player",
+      "file": "player_walk_1.png",
+      "group": "char",
+      "name": "학생 (플레이어)",
+      "size": "1024x1024",
+      "refs": [
+        "character"
+      ],
+      "prompt": "The student from the character reference sheet: a girl with cat-ear hair buns, a small cat hair clip, gray cardigan, red ribbon bow, navy backpack with a cat charm, dark pleated skirt, white socks and brown shoes. Full body, 3/4 side view facing left, mid-walk."
+    },
+    {
+      "key": "cat:baby",
+      "file": "cat_baby_walk_1.png",
+      "group": "cat",
+      "name": "아기 고양이",
+      "size": "1024x1024",
+      "refs": [
+        "cats"
+      ],
+      "prompt": "A tiny kitten, cream-peach fur, very big head and small body, sweet face."
+    },
+    {
+      "key": "cat:stray",
+      "file": "cat_stray_walk_1.png",
+      "group": "cat",
+      "name": "길냥이",
+      "size": "1024x1024",
+      "refs": [
+        "cats"
+      ],
+      "prompt": "An ordinary gray-brown tabby street cat with darker stripes, curious face."
+    },
+    {
+      "key": "cat:dash",
+      "file": "cat_dash_walk_1.png",
+      "group": "cat",
+      "name": "우다다 냥이",
+      "size": "1024x1024",
+      "refs": [
+        "cats"
+      ],
+      "prompt": "An orange-yellow striped cat mid-dash, zooming energetically, ears back, motion feeling."
+    },
+    {
+      "key": "cat:fat",
+      "file": "cat_fat_walk_1.png",
+      "group": "cat",
+      "name": "뚱냥이",
+      "size": "1024x1024",
+      "refs": [
+        "cats"
+      ],
+      "prompt": "A very chubby round cream-white cat with one gray-brown patch, heavy and stubborn, lumbering."
+    },
+    {
+      "key": "cat:black",
+      "file": "cat_black_walk_1.png",
+      "group": "cat",
+      "name": "검은 고양이 무리",
+      "size": "1024x1024",
+      "refs": [
+        "cats"
+      ],
+      "prompt": "A sleek black cat with big yellow eyes."
+    },
+    {
+      "key": "cat:wall",
+      "file": "cat_wall_walk_1.png",
+      "group": "cat",
+      "name": "담벼락 냥이",
+      "size": "1024x1024",
+      "refs": [
+        "cats"
+      ],
+      "prompt": "A blue-gray striped cat crouched low, about to pounce down from a wall."
+    },
+    {
+      "key": "cat:elite",
+      "file": "cat_elite_walk_1.png",
+      "group": "cat",
+      "name": "대장 고양이",
+      "size": "1024x1024",
+      "refs": [
+        "cats"
+      ],
+      "prompt": "A big, tough brown tabby neighborhood boss cat with a small scar over one eye, wearing an open cardboard delivery box on its head like a helmet (box sealed with tape and a cat paw sticker). Bigger and sturdier than a normal cat."
+    },
+    {
+      "key": "cat:cheese",
+      "file": "cat_cheese_walk_1.png",
+      "group": "cat",
+      "name": "뚱보 치즈",
+      "size": "1024x1024",
+      "refs": [
+        "cats"
+      ],
+      "prompt": "BOSS: a huge fat orange tabby cat, the convenience-store boss, round belly, smug face, a triangle kimbap tucked under one paw."
+    },
+    {
+      "key": "cat:sam",
+      "file": "cat_sam_walk_1.png",
+      "group": "cat",
+      "name": "골목대장 삼색이",
+      "size": "1024x1024",
+      "refs": [
+        "cats"
+      ],
+      "prompt": "BOSS: a proud calico alley boss cat (white with orange and black patches), chest puffed out, suspicious squint."
+    },
+    {
+      "key": "cat:tux",
+      "file": "cat_tux_walk_1.png",
+      "group": "cat",
+      "name": "냥아치 대장 턱시도",
+      "size": "1024x1024",
+      "refs": [
+        "cats"
+      ],
+      "prompt": "BOSS: a black-and-white tuxedo cat whose markings look like a formal suit, with a tiny red bow tie, cool gangster attitude."
+    },
+    {
+      "key": "cat:king",
+      "file": "cat_king_walk_1.png",
+      "group": "cat",
+      "name": "등교 저지 위원장 왕고양이",
+      "size": "1024x1024",
+      "refs": [
+        "cats"
+      ],
+      "prompt": "FINAL BOSS: a large gray-beige striped king cat wearing a golden crown and a short red cape, imposing but still cute."
+    },
+    {
+      "key": "walk:player",
+      "file": "player_walk_2.png",
+      "group": "walk",
+      "name": "학생 (플레이어) 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@player_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image."
+    },
+    {
+      "key": "walk:baby",
+      "file": "cat_baby_walk_2.png",
+      "group": "walk",
+      "name": "아기 고양이 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@cat_baby_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image."
+    },
+    {
+      "key": "walk:stray",
+      "file": "cat_stray_walk_2.png",
+      "group": "walk",
+      "name": "길냥이 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@cat_stray_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image."
+    },
+    {
+      "key": "walk:dash",
+      "file": "cat_dash_walk_2.png",
+      "group": "walk",
+      "name": "우다다 냥이 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@cat_dash_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image."
+    },
+    {
+      "key": "walk:fat",
+      "file": "cat_fat_walk_2.png",
+      "group": "walk",
+      "name": "뚱냥이 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@cat_fat_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image."
+    },
+    {
+      "key": "walk:black",
+      "file": "cat_black_walk_2.png",
+      "group": "walk",
+      "name": "검은 고양이 무리 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@cat_black_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image."
+    },
+    {
+      "key": "walk:wall",
+      "file": "cat_wall_walk_2.png",
+      "group": "walk",
+      "name": "담벼락 냥이 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@cat_wall_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image."
+    },
+    {
+      "key": "walk:elite",
+      "file": "cat_elite_walk_2.png",
+      "group": "walk",
+      "name": "대장 고양이 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@cat_elite_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image. The cardboard box stays exactly where it is in frame 1, sitting on top of the head with the whole face (eyes, scar, mouth) clearly visible below it."
+    },
+    {
+      "key": "walk:cheese",
+      "file": "cat_cheese_walk_2.png",
+      "group": "walk",
+      "name": "뚱보 치즈 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@cat_cheese_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image."
+    },
+    {
+      "key": "walk:sam",
+      "file": "cat_sam_walk_2.png",
+      "group": "walk",
+      "name": "골목대장 삼색이 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@cat_sam_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image."
+    },
+    {
+      "key": "walk:tux",
+      "file": "cat_tux_walk_2.png",
+      "group": "walk",
+      "name": "냥아치 대장 턱시도 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@cat_tux_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image."
+    },
+    {
+      "key": "walk:king",
+      "file": "cat_king_walk_2.png",
+      "group": "walk",
+      "name": "등교 저지 위원장 왕고양이 걷기 2",
+      "size": "1024x1024",
+      "refs": [
+        "@cat_king_walk_1"
+      ],
+      "prompt": "Walking frame 2 of the character in the first reference image."
+    },
+    {
+      "key": "pick:heart",
+      "file": "pick_heart.png",
+      "group": "pick",
+      "name": "하트 (경험치)",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "A glossy pink heart pickup (experience), with a small white shine."
+    },
+    {
+      "key": "pick:coin",
+      "file": "pick_coin.png",
+      "group": "pick",
+      "name": "용돈",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "A shiny gold coin with a cat paw print stamped on it."
+    },
+    {
+      "key": "pick:food",
+      "file": "pick_food.png",
+      "group": "pick",
+      "name": "삼각김밥",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "A triangle kimbap (onigiri) rice ball wrapped with a dark seaweed band."
+    },
+    {
+      "key": "pick:vacuum",
+      "file": "pick_vacuum.png",
+      "group": "pick",
+      "name": "진공청소기",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "A small blue handheld vacuum cleaner."
+    },
+    {
+      "key": "pick:cucumber",
+      "file": "pick_cucumber.png",
+      "group": "pick",
+      "name": "오이",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "A fresh green cucumber, slightly curved."
+    },
+    {
+      "key": "pick:spray",
+      "file": "pick_spray.png",
+      "group": "pick",
+      "name": "분무기",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "A light-blue plastic water spray bottle (mister)."
+    },
+    {
+      "key": "pick:chest",
+      "file": "pick_chest.png",
+      "group": "pick",
+      "name": "택배상자",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "A cardboard delivery box sealed with tape and a cat paw sticker, slightly glowing like a treasure chest."
+    },
+    {
+      "key": "icon:churu",
+      "file": "icon_churu.png",
+      "group": "icon",
+      "name": "츄르",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a squeezable orange cat-treat tube (lickable cat treat stick)."
+    },
+    {
+      "key": "icon:feather",
+      "file": "icon_feather.png",
+      "group": "icon",
+      "name": "깃털 낚싯대",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a cat teaser wand, a stick with a pink feather on a string."
+    },
+    {
+      "key": "icon:laser",
+      "file": "icon_laser.png",
+      "group": "icon",
+      "name": "레이저 포인터",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a red laser pointer pen with a red dot."
+    },
+    {
+      "key": "icon:catnip",
+      "file": "icon_catnip.png",
+      "group": "icon",
+      "name": "캣닢 봉지",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a small green pouch of catnip with leaves sticking out."
+    },
+    {
+      "key": "icon:yarn",
+      "file": "icon_yarn.png",
+      "group": "icon",
+      "name": "털실뭉치",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a purple ball of yarn with a loose strand."
+    },
+    {
+      "key": "icon:mouse",
+      "file": "icon_mouse.png",
+      "group": "icon",
+      "name": "태엽 쥐돌이",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a gray wind-up toy mouse with a gold key on its back."
+    },
+    {
+      "key": "icon:matatabi",
+      "file": "icon_matatabi.png",
+      "group": "icon",
+      "name": "마따따비 향주머니",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a teal scent sachet pouch with silvervine twigs."
+    },
+    {
+      "key": "icon:bubble",
+      "file": "icon_bubble.png",
+      "group": "icon",
+      "name": "비눗방울 건",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a blue toy bubble gun with bubbles."
+    },
+    {
+      "key": "icon:lunch",
+      "file": "icon_lunch.png",
+      "group": "icon",
+      "name": "든든한 도시락",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a hearty lunch box (dosirak) with rice and side dishes."
+    },
+    {
+      "key": "icon:shoes",
+      "file": "icon_shoes.png",
+      "group": "icon",
+      "name": "운동화",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a pair of sneakers."
+    },
+    {
+      "key": "icon:battery",
+      "file": "icon_battery.png",
+      "group": "icon",
+      "name": "보조배터리",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a portable power bank with a lightning symbol."
+    },
+    {
+      "key": "icon:ears",
+      "file": "icon_ears.png",
+      "group": "icon",
+      "name": "냥이 귀 머리띠",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a cat-ear headband."
+    },
+    {
+      "key": "icon:refill",
+      "file": "icon_refill.png",
+      "group": "icon",
+      "name": "대용량 리필팩",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a big refill bag of cat treats."
+    },
+    {
+      "key": "icon:clock",
+      "file": "icon_clock.png",
+      "group": "icon",
+      "name": "태엽 알람시계",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a gold wind-up alarm clock with two bells."
+    },
+    {
+      "key": "icon:milk",
+      "file": "icon_milk.png",
+      "group": "icon",
+      "name": "바나나우유",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a small round yellow bottle of banana milk."
+    },
+    {
+      "key": "icon:magnet",
+      "file": "icon_magnet.png",
+      "group": "icon",
+      "name": "자석 필통",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Item icon: a pencil case with a red horseshoe magnet."
+    },
+    {
+      "key": "icon:cannon",
+      "file": "icon_cannon.png",
+      "group": "icon",
+      "name": "참치맛 츄르 대포",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Evolved item icon (golden sparkle accent): a big orange tuna-flavored cat-treat cannon blob."
+    },
+    {
+      "key": "icon:pinwheel",
+      "file": "icon_pinwheel.png",
+      "group": "icon",
+      "name": "바람개비 깃털",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Evolved item icon (golden sparkle accent): a pinwheel made of pink feathers."
+    },
+    {
+      "key": "icon:mirrorball",
+      "file": "icon_mirrorball.png",
+      "group": "icon",
+      "name": "미러볼 레이저쇼",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Evolved item icon (golden sparkle accent): a silver disco mirror ball shooting red laser dots."
+    },
+    {
+      "key": "icon:flowerfield",
+      "file": "icon_flowerfield.png",
+      "group": "icon",
+      "name": "캣닢 꽃밭",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Evolved item icon (golden sparkle accent): a round patch of blooming catnip flowers."
+    },
+    {
+      "key": "icon:yarnstorm",
+      "file": "icon_yarnstorm.png",
+      "group": "icon",
+      "name": "털실 폭풍",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Evolved item icon (golden sparkle accent): a swirling tornado of purple yarn."
+    },
+    {
+      "key": "icon:infmouse",
+      "file": "icon_infmouse.png",
+      "group": "icon",
+      "name": "무한태엽 쥐돌이",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Evolved item icon (golden sparkle accent): a golden wind-up toy mouse with an infinity sign."
+    },
+    {
+      "key": "icon:forest",
+      "file": "icon_forest.png",
+      "group": "icon",
+      "name": "마따따비 숲",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Evolved item icon (golden sparkle accent): a tiny silvervine forest of three small trees."
+    },
+    {
+      "key": "icon:blackhole",
+      "file": "icon_blackhole.png",
+      "group": "icon",
+      "name": "블랙홀 비눗방울",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Evolved item icon (golden sparkle accent): a dark purple swirling black-hole soap bubble."
+    },
+    {
+      "key": "icon:disco",
+      "file": "icon_disco.png",
+      "group": "icon",
+      "name": "냥냥 디스코 파티",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Ultimate item icon (rainbow glow accent): a cat disco party, mirror ball over a purple bubble with colorful lights."
+    },
+    {
+      "key": "icon:paradise",
+      "file": "icon_paradise.png",
+      "group": "icon",
+      "name": "고양이 낙원",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Ultimate item icon (rainbow glow accent): a cat paradise, cozy cushion among flowers under a warm sun."
+    },
+    {
+      "key": "icon:legion",
+      "file": "icon_legion.png",
+      "group": "icon",
+      "name": "털실 쥐돌이 군단",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Ultimate item icon (rainbow glow accent): a squad of golden wind-up mice dragging yarn strands."
+    },
+    {
+      "key": "icon:tornado",
+      "file": "icon_tornado.png",
+      "group": "icon",
+      "name": "츄르 회오리",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Ultimate item icon (rainbow glow accent): a whirlwind of feathers flinging orange cat-treat drops."
+    },
+    {
+      "key": "proj:churu",
+      "file": "proj_churu.png",
+      "group": "proj",
+      "name": "츄르 방울",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Projectile: a small orange blob of lickable cat treat flying to the right, slightly elongated horizontally with a shine."
+    },
+    {
+      "key": "proj:cannon",
+      "file": "proj_cannon.png",
+      "group": "proj",
+      "name": "참치맛 츄르 덩어리",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Projectile: a large chunk of orange tuna-flavored cat treat flying to the right, elongated horizontally, glossy."
+    },
+    {
+      "key": "proj:laser",
+      "file": "proj_laser.png",
+      "group": "proj",
+      "name": "레이저 점",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Projectile: a bright red laser-pointer dot with a soft red glow, perfectly round."
+    },
+    {
+      "key": "proj:rainbow",
+      "file": "proj_rainbow.png",
+      "group": "proj",
+      "name": "무지개 레이저 점",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Projectile: a rainbow-colored glowing laser dot with a soft glow, perfectly round."
+    },
+    {
+      "key": "proj:yarn",
+      "file": "proj_yarn.png",
+      "group": "proj",
+      "name": "털실뭉치",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Projectile: a small purple ball of yarn, round."
+    },
+    {
+      "key": "proj:spiral",
+      "file": "proj_spiral.png",
+      "group": "proj",
+      "name": "회오리 털실",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Projectile: a bigger dark purple ball of yarn with a swirling strand, round."
+    },
+    {
+      "key": "proj:mouse",
+      "file": "proj_mouse.png",
+      "group": "proj",
+      "name": "태엽 쥐돌이",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Projectile: a gray wind-up toy mouse in TOP-DOWN view (seen from directly above, bird's-eye), body lying horizontally with its nose and head at the RIGHT edge and its tail trailing off to the LEFT, round ears near the right end, gold wind-up key on its back. The mouse must face RIGHT."
+    },
+    {
+      "key": "proj:goldmouse",
+      "file": "proj_goldmouse.png",
+      "group": "proj",
+      "name": "황금 쥐돌이",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Projectile: a shiny golden wind-up toy mouse in TOP-DOWN view (seen from directly above, bird's-eye), body lying horizontally with its nose and head at the RIGHT edge and its tail trailing off to the LEFT, round ears near the right end, small sparkles. The mouse must face RIGHT."
+    },
+    {
+      "key": "proj:bubble",
+      "file": "proj_bubble.png",
+      "group": "proj",
+      "name": "비눗방울",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Projectile: a translucent light-blue soap bubble with a white highlight, round."
+    },
+    {
+      "key": "proj:black",
+      "file": "proj_black.png",
+      "group": "proj",
+      "name": "블랙홀 방울",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Projectile: a dark purple swirling vortex bubble with a white rim, round."
+    },
+    {
+      "key": "wep:feather",
+      "file": "wep_feather.png",
+      "group": "proj",
+      "name": "깃털 휘두르기",
+      "size": "1536x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Weapon part: one long pink feather lying horizontally, quill on the left and tip pointing right, very long and thin."
+    },
+    {
+      "key": "wep:pinwheel",
+      "file": "wep_pinwheel.png",
+      "group": "proj",
+      "name": "바람개비 깃털 날개",
+      "size": "1536x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Weapon part: one long pink feather blade lying horizontally, base on the left and tip pointing right, long and thin."
+    },
+    {
+      "key": "wep:tornado",
+      "file": "wep_tornado.png",
+      "group": "proj",
+      "name": "회오리 날개",
+      "size": "1536x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Weapon part: one long orange flame-like feather blade lying horizontally, base on the left and tip pointing right, long and thin."
+    },
+    {
+      "key": "wep:mirrorball",
+      "file": "wep_mirrorball.png",
+      "group": "proj",
+      "name": "미러볼",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Weapon part: a small silver disco mirror ball hanging from a short string at the top."
+    },
+    {
+      "key": "part:leaf",
+      "file": "part_leaf.png",
+      "group": "part",
+      "name": "캣닢 잎",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "A single small green catnip leaf, slightly curled, with a soft highlight."
+    },
+    {
+      "key": "part:petal",
+      "file": "part_petal.png",
+      "group": "part",
+      "name": "캣닢 꽃",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "A single tiny pale pink-and-white catnip blossom with five round petals and a yellow center."
+    },
+    {
+      "key": "part:sparkle",
+      "file": "part_sparkle.png",
+      "group": "part",
+      "name": "반짝이",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "A single small four-pointed sparkle star, pale yellow-green, glowing softly."
+    },
+    {
+      "key": "zone:puddle",
+      "file": "zone_puddle.png",
+      "group": "fx",
+      "name": "츄르 웅덩이",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Ground effect seen from directly above: a wide oval puddle of glossy orange cat-treat sauce, semi-transparent."
+    },
+    {
+      "key": "aura:matatabi",
+      "file": "aura_matatabi.png",
+      "group": "fx",
+      "name": "마따따비 향기 오라",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Aura seen from directly above: a soft teal circular scent cloud ring with tiny silvervine leaves, translucent, circular."
+    },
+    {
+      "key": "aura:forest",
+      "file": "aura_forest.png",
+      "group": "fx",
+      "name": "마따따비 숲",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Aura seen from directly above: a circular ring of small silvervine bushes and trees with a teal glow, translucent center, circular."
+    },
+    {
+      "key": "aura:flowerfield",
+      "file": "aura_flowerfield.png",
+      "group": "fx",
+      "name": "캣닢 꽃밭",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Aura seen from directly above: a circular field of pink and yellow catnip flowers on soft grass, translucent edges, circular."
+    },
+    {
+      "key": "aura:paradise",
+      "file": "aura_paradise.png",
+      "group": "fx",
+      "name": "고양이 낙원",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Aura seen from directly above: a circular golden cat paradise with flowers, cushions and warm light, translucent edges, circular."
+    },
+    {
+      "key": "fx:ring",
+      "file": "fx_ring.png",
+      "group": "fx",
+      "name": "터지는 효과",
+      "size": "1024x1024",
+      "refs": [
+        "character",
+        "cats"
+      ],
+      "prompt": "Effect: a white and light-blue burst shockwave ring with a few sparkles, circular, translucent, empty center."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# 비밀 정보: 절대 올리지 않는다
+.env
+.env.*
+!.env.example
+
+# 생성 스크립트 실행 기록 (토큰 사용량 등, 로컬 전용)
+art/generated/_*
+
+# 운영체제·편집기 찌꺼기
+.DS_Store
+__pycache__/
+*.pyc
